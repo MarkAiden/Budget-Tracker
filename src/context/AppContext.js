@@ -30,6 +30,12 @@ const AppReducer = (state, action) => {
                 expenses: updatedExpenses,
             };
 
+        case 'EDIT_BUDGET': // Manejar la edición del presupuesto
+            return {
+                ...state,
+                budget: action.payload
+            };
+
         default:
             return state;
     }

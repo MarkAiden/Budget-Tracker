@@ -21,13 +21,17 @@ const AddExpenseForm = () => {
             type: 'ADD_EXPENSE',
             payload: expense,
         });
+
+        // Limpiar los valores después de agregar el gasto
+        setName('');
+        setCost('');
     };
 
     return (
         <form onSubmit={onSubmit}>
             <div className="row">
                 <div className="col-sm">
-                    <label for='name'>Nombre</label>
+                    <label htmlFor='name'>Nombre</label>
                     <input
                         required='required'
                         type="text"
@@ -39,7 +43,7 @@ const AddExpenseForm = () => {
                 </div>
 
                 <div className="col-sm">
-                    <label for='cost'>Costo</label>
+                    <label htmlFor='cost'>Costo</label>
                     <input
                         required='required'
                         type="text"

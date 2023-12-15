@@ -15,6 +15,11 @@ const ExpenseItem = (props) => {
     };
 
     const handleEditExpense = () => {
+        if (newCost <= 0) {
+            alert("El costo debe ser mayor que 0");
+            return;
+        }
+
         dispatch({
             type: 'EDIT_EXPENSE',
             payload: { id: props.id, newCost: newCost },
