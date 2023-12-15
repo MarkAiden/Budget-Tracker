@@ -46,7 +46,7 @@ const AddExpenseForm = () => {
                     <label htmlFor='cost'>Costo</label>
                     <input
                         required='required'
-                        type="text"
+                        type="number"
                         className="form-control"
                         id="cost"
                         value={cost}
